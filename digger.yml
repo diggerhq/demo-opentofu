@@ -5,3 +5,10 @@ workflows:
         - init
         - plan
         - run: infracost breakdown --path=. | tee -a $DIGGER_OUT
+  default2:
+    plan:
+      steps:
+        - init
+        - plan
+        - run: echo "in default 2"
+        - run: infracost breakdown --path=. | tee -a $DIGGER_OUT
