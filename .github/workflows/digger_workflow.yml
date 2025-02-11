@@ -34,6 +34,7 @@ jobs:
       - name: digger
         uses: diggerhq/digger@feat/aws-plan-storage-s3-enc
         with:
+          setup-terraform: true
           digger-spec: ${{ inputs.spec }}
           digger-private-key: ${{ secrets.DIGGER_PRIVATE_KEY }}
           setup-aws: true
