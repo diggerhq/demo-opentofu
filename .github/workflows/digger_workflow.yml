@@ -46,7 +46,8 @@ jobs:
           upload-plan-destination: aws
           upload-plan-destination-s3-bucket: test-s3-artefacts
           upload-plan-destination-s3-encryption-enabled: true
-          upload-plan-destination-s3-encryption-type: AES256          
+          upload-plan-destination-s3-encryption-type: KMS
+          upload-plan-destination-s3-encryption-kms-key-id: 58aa230f-8059-411a-bd28-c620e2a86e1c
         env:
           GITHUB_CONTEXT: ${{ toJson(github) }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
