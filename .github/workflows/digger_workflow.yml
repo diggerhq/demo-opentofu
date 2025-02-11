@@ -43,7 +43,7 @@ jobs:
           disable-locking: true
           setup-opentofu: true
           opentofu-version: 1.6.0
-          upload-plan-destination: s3
+          upload-plan-destination: aws
           upload-plan-destination-s3-bucket: test-s3-artefacts
           upload-plan-destination-s3-encryption-enabled: true
           upload-plan-destination-s3-encryption-type: AES256          
