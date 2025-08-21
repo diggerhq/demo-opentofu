@@ -1,4 +1,9 @@
+allow_draft_prs: true
+auto_merge: false
+pr_locks: true
+telemetry: false
 traverse_to_nested_projects: true
+
 projects:
   - name: SHARED
     dir: k8s_deployment
@@ -24,8 +29,22 @@ projects:
     include_patterns: ["*.tf", "../_env_data/prod.json", "modules/**/*.tf", "modules/**/*.yaml"]
     workspace: prod
 
+generate_projects:
+  blocks:
+    - include: "./terraform/services/**"
+      workflow: main
+
 workflows:
   terraform:
+    plan:
+      steps:
+        - init
+        - plan
+    apply:
+      steps:
+        - init
+        - apply
+  main:
     plan:
       steps:
         - init
