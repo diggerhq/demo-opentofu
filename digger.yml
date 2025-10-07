@@ -35,7 +35,15 @@ generate_projects:
       workflow: main
 
 workflows:
+  default:
+    on_commit_to_default:
+      - init
+      - apply
+      
   terraform:
+    on_commit_to_default:     # ← ADD THIS
+      - init
+      - apply
     plan:
       steps:
         - init
@@ -44,7 +52,11 @@ workflows:
       steps:
         - init
         - apply
+        
   main:
+    on_commit_to_default:     # ← ADD THIS
+      - init
+      - apply
     plan:
       steps:
         - init
