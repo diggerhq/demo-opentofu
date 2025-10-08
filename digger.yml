@@ -38,14 +38,14 @@ workflows:
   terraform:
     env_vars: 
       state:
-        name: AWS_ACCESS_KEY_ID
+      - name: AWS_ACCESS_KEY_ID
         value_from: DIGGER_AWS_ACCESS_KEY_ID 
-        name: AWS_SECRET_ACCESS_KEY
+      - name: AWS_SECRET_ACCESS_KEY
         value_from: DIGGER_AWS_SECRET_ACCESS_KEY
       commands:
-        name: AWS_ACCESS_KEY_ID
+      - name: AWS_ACCESS_KEY_ID
         value_from: AWS_ACCESS_KEY_ID
-        name: AWS_SECRET_ACCESS_KEY
+      - name: AWS_SECRET_ACCESS_KEY
         value_from: AWS_SECRET_ACCESS_KEY
 
     on_commit_to_default:
