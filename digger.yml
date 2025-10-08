@@ -29,11 +29,6 @@ projects:
     include_patterns: ["*.tf", "../_env_data/prod.json", "modules/**/*.tf", "modules/**/*.yaml"]
     workspace: prod
 
-generate_projects:
-  blocks:
-    - include: "./terraform/services/**"
-      workflow: main
-
 workflows:
   default:
     on_commit_to_default:
@@ -41,27 +36,31 @@ workflows:
       - apply
       
   terraform:
-    on_commit_to_default:     # ← ADD THIS
+    on_commit_to_default:
       - init
       - apply
     plan:
       steps:
-        - init
+        - init:
+            extra_args: ["-backend-config=tf_backend.tfbackend"]
         - plan
     apply:
       steps:
-        - init
+        - init:
+            extra_args: ["-backend-config=tf_backend.tfbackend"]
         - apply
         
   main:
-    on_commit_to_default:     # ← ADD THIS
+    on_commit_to_default:
       - init
       - apply
     plan:
       steps:
-        - init
+        - init:
+            extra_args: ["-backend-config=tf_backend.tfbackend"]
         - plan
     apply:
       steps:
-        - init
+        - init:
+            extra_args: ["-backend-config=tf_backend.tfbackend"]
         - apply
