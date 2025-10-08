@@ -1,0 +1,6 @@
+bucket         = "brian-backendless-test  "
+key            = "k8s_deployment/terraform.tfstate"
+region         = "us-east-2"
+encrypt        = true
+dynamodb_table = "terraform-state-locks"
+
