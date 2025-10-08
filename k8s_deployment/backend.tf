@@ -8,9 +8,3 @@ terraform {
     # - env:/prod/terraform.tfstate
   }
 }
-
-
-
-
-
-
