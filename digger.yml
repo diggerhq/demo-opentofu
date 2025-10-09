@@ -29,40 +29,27 @@ projects:
     include_patterns: ["*.tf", "../_env_data/prod.json", "modules/**/*.tf", "modules/**/*.yaml"]
     workspace: prod
 
+generate_projects:
+  blocks:
+    - include: "./terraform/services/**"
+      workflow: main
+
 workflows:
-  default:
-    on_commit_to_default:
-      - init
-      - apply
-      
   terraform:
-    env_vars: 
-      commands:
-      - name: AWS_ACCESS_KEY_ID
-        value_from: AWS_ACCESS_KEY_ID
-      - name: AWS_SECRET_ACCESS_KEY
-        value_from: AWS_SECRET_ACCESS_KEY
-    on_commit_to_default:
-      - init
-      - apply
     plan:
       steps:
-        - init:
+        - init
         - plan
     apply:
       steps:
-        - init:
+        - init
         - apply
-        
   main:
-    on_commit_to_default:
-      - init
-      - apply
     plan:
       steps:
-        - init:
+        - init
         - plan
     apply:
       steps:
-        - init:
+        - init
         - apply
