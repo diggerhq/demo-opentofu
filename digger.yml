@@ -48,12 +48,10 @@ workflows:
     plan:
       steps:
         - init:
-            extra_args: ["-backend-config=tf_backend.tfbackend","-backend-config=access_key=$DIGGER_AWS_ACCESS_KEY_ID","-backend-config=secret_key=$DIGGER_AWS_SECRET_ACCESS_KEY"]
         - plan
     apply:
       steps:
         - init:
-            extra_args: ["-backend-config=tf_backend.tfbackend","-backend-config=access_key=$DIGGER_AWS_ACCESS_KEY_ID","-backend-config=secret_key=$DIGGER_AWS_SECRET_ACCESS_KEY"]
         - apply
         
   main:
@@ -63,10 +61,8 @@ workflows:
     plan:
       steps:
         - init:
-            extra_args: ["-backend-config=tf_backend.tfbackend"]
         - plan
     apply:
       steps:
         - init:
-            extra_args: ["-backend-config=tf_backend.tfbackend"]
         - apply
