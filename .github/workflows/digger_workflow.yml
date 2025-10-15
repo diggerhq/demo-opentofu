@@ -36,6 +36,8 @@ jobs:
         with:
           digger-spec: ${{ inputs.spec }}
           digger-private-key: ${{ secrets.DIGGER_PRIVATE_KEY }}
+          digger-os: "darwin"
+          digger-arch: "arm64"
           setup-aws: false
           disable-locking: true
           setup-opentofu: true
