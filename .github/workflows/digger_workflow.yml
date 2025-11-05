@@ -36,6 +36,8 @@ jobs:
         with:
           digger-spec: ${{ inputs.spec }}
           digger-private-key: ${{ secrets.DIGGER_PRIVATE_KEY }}
+          terraform-tfe-token: ${{ secrets.DIGGER_TOKEN }}
+          terraform-tfe-hostname: otaco.app
           setup-aws: false
           disable-locking: true
           setup-opentofu: true
