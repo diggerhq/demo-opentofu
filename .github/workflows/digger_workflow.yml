@@ -38,7 +38,7 @@ jobs:
           digger-private-key: ${{ secrets.DIGGER_PRIVATE_KEY }}
           terraform-tfe-token: ${{ secrets.DIGGER_TOKEN }}
           terraform-tfe-hostname: mo-digger-test.ngrok.app
-          terraform-version: 1.5.5
+          terraform-version: 1.9.2
           setup-aws: false
           disable-locking: true
           setup-opentofu: true
