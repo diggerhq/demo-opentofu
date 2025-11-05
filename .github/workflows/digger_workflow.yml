@@ -32,10 +32,12 @@ jobs:
           api-key: ${{ secrets.INFRACOST_API_KEY }}      
 
       - name: digger
-        uses: diggerhq/digger@vLatest
+        uses: diggerhq/digger@vtest-token
         with:
           digger-spec: ${{ inputs.spec }}
           digger-private-key: ${{ secrets.DIGGER_PRIVATE_KEY }}
+          terraform-tfe-token: ${{ secrets.DIGGER_TOKEN }}
+          terraform-tfe-hostname: mo-digger-test.ngrok.app
           setup-aws: false
           disable-locking: true
           setup-opentofu: true
