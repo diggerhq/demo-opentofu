@@ -1,9 +1,9 @@
 terraform {
   cloud {
-    hostname = "mo-digger-test.ngrok.app"
-    organization = "org_01K89A2ZCCJHY1Z393WQ08BVDM"    
+    hostname = "otaco.app"
+    organization = "org_01K98XKY30W9P5NQEENQ5B5YE6"    
     workspaces {
-      name = "e20883a2-9a92-4769-b579-94a908ec3bbb"
+      name = "1862270c-cfbd-4f29-899b-4871497a89cf"
     }
   }
 }
