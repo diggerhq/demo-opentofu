@@ -3,10 +3,9 @@ terraform {
     hostname = "otaco.app"
     organization = "org_01K98XKY30W9P5NQEENQ5B5YE6"    
     workspaces {
-      name = "d3fefb68-ec0c-4f2d-a971-13986c2e38c8"
+      name = "6b8f8d39-385a-4110-8df3-0b7c4be3b73d"
     }
   }
 }
-
 resource "null_resource" "test3" {}
 
