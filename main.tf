@@ -20,5 +20,3 @@ resource "null_resource" "test29" {}
 #  value = var.SECRET
 #}
 
-
-
