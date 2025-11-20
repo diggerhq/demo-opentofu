@@ -4,6 +4,8 @@ auto_merge_strategy: "merge"
 projects:
   - name: dev
     dir: dev/
+    opentofu: true
+    
   - name: prod
     dir: prod/
   - name: prod11
