@@ -1,6 +1,9 @@
 auto_merge: true
 auto_merge_strategy: "merge"
 
+reporting:
+  comments_enabled: false
+
 projects:
   - name: dev
     dir: dev/
