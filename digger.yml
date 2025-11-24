@@ -7,6 +7,7 @@ reporting:
 projects:
   - name: dev
     dir: dev/
+    opentofu: true
   - name: prod
     dir: prod/
   - name: prod11
