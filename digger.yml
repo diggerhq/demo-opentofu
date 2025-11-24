@@ -2,7 +2,7 @@ auto_merge: true
 auto_merge_strategy: "merge"
 
 reporting:
-  comments_enabled: false
+  comments_enabled: true
 
 projects:
   - name: dev
