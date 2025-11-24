@@ -2,24 +2,16 @@ auto_merge: true
 auto_merge_strategy: "merge"
 
 reporting:
-  comments_enabled: false
+  comments_enabled: true
 
 projects:
   - name: dev
     dir: dev/
+    opentofu: true
   - name: prod
     dir: prod/
   - name: prod11
     dir: prod/
   - name: prod12
     dir: prod/
-
-
-workflows:
-  default:
-    plan:
-      steps:
-        - init
-        - run: terraform plan -input=false -refresh -no-color -out $DIGGER_PLANFILE
-        # - run: infracost breakdown --path=. | tee -a $DIGGER_OUT
 
