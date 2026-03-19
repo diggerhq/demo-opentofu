@@ -13,4 +13,12 @@ terraform {
   }
 }
 
-resource "null_resource" "test" {}
+resource "null_resource" "api_gateway" {}
+
+resource "null_resource" "monitoring_alerts" {
+  triggers = {
+    environment = "prod"
+    alert_email = "oncall@example.com"
+    pagerduty   = "true"
+  }
+}
