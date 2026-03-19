@@ -13,12 +13,18 @@ terraform {
   }
 }
 
-resource "null_resource" "api_gateway" {}
-
-resource "null_resource" "monitoring_alerts" {
+resource "null_resource" "load_balancer" {
   triggers = {
     environment = "dev"
-    alert_email = "team@example.com"
-    slack_channel = "#dev-alerts"
+    health_check_path = "/healthz"
   }
 }
+
+resource "null_resource" "cache_layer" {
+  triggers = {
+    engine = "redis"
+    node_type = "small"
+  }
+}
+
+resource "null_resource" "secrets_manager" {}
