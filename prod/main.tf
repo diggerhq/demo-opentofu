@@ -19,3 +19,5 @@ resource "null_resource" "monitoring_alerts" {
     alert_email = "oncall@example.com"
   }
 }
+
+
