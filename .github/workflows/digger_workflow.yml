@@ -39,9 +39,9 @@ jobs:
           terraform-tfe-token: ${{ secrets.DIGGER_TOKEN }}
           terraform-tfe-hostname: otaco.app
           terraform-version: 1.9.2
-          setup-aws: true
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          # setup-aws: true
+          # aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          # aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           disable-locking: true
           setup-opentofu: true
           setup-terraform: true
